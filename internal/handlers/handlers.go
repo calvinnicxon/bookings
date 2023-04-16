@@ -6,9 +6,9 @@ import (
 	"log"
 	"net/http"
 
-	"github.com/calvinnicxon/bookings/pkg/config"
-	"github.com/calvinnicxon/bookings/pkg/models"
-	"github.com/calvinnicxon/bookings/pkg/render"
+	"github.com/calvinnicxon/bookings/internal/config"
+	"github.com/calvinnicxon/bookings/internal/models"
+	"github.com/calvinnicxon/bookings/internal/render"
 )
 
 // Repo the repository used by the handlers
