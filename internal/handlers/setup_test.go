@@ -99,11 +99,11 @@ func SessionLoad(next http.Handler) http.Handler {
 
 // CreateTestTemplateCache creates a template cache as a map
 func CreateTestTemplateCache() (map[string]*template.Template, error) {
-	// myCache := make(map[string]*template.Template)
+
 	myCache := map[string]*template.Template{}
 
 	// get all of the files named *page.html from ./templates
-	pages, err := filepath.Glob(fmt.Sprintf("%s/*.page.html", pathToTemplates))
+	pages, err := filepath.Glob(fmt.Sprintf("%s/*page.html", pathToTemplates))
 	if err != nil {
 		return myCache, err
 	}
@@ -131,5 +131,5 @@ func CreateTestTemplateCache() (map[string]*template.Template, error) {
 		myCache[name] = ts
 	}
 
-	return myCache, err
+	return myCache, nil
 }
